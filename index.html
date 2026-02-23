@@ -40,57 +40,72 @@
                 <div class="derivation-card">
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
                         <h2>1st Order Integrated Rate Equation</h2>
-                        <span class="badge">Unit 3 | V. Imp</span>
+                        <span class="badge">V. Imp | 5 Marks</span>
                     </div>
 
                     <div class="step">
-                        <span class="step-label">Step 1: Differential Rate Law</span>
-                        <p>For reaction \(R \to P\), the rate is proportional to \([R]\):</p>
+                        <span class="step-label">Step 1: Introduction & Assumption</span>
+                        <p>Consider a first-order reaction: \(R \to P\)</p>
+                        <p>The rate of reaction is proportional to the concentration of reactant raised to the power 1.
+                        </p>
                         <div class="math-block">
-                            \(\text{Rate} = -\frac{d[R]}{dt} = k[R]\)
+                            \(\text{Rate} = -\frac{d[R]}{dt} = k[R]^1\)
                         </div>
                     </div>
 
                     <div class="step">
-                        <span class="step-label">Step 2: Rearrange and Integrate</span>
-                        <p>Separate variables and integrate from \(t=0\) to \(t=t\):</p>
+                        <span class="step-label">Step 2: Separation of Variables</span>
+                        <p>Rearranging the equation to separate concentration and time terms:</p>
+                        <div class="math-block">
+                            \(\frac{d[R]}{[R]} = -k dt\)
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-label">Step 3: Integration</span>
+                        <p>Integrating both sides:</p>
                         <div class="math-block">
                             \(\int \frac{d[R]}{[R]} = -\int k dt\)
                         </div>
-                        <p>\(\ln[R] = -kt + I\)</p>
+                        <p>\(\ln[R] = -kt + I \quad \text{--- (Eq. 1)}\)</p>
+                        <p>Where \(I\) is the constant of integration.</p>
                     </div>
 
                     <div class="step">
-                        <span class="step-label">Step 3: Solve for Constant</span>
-                        <p>At \(t=0\), \([R] = [R]_0\). Thus, \(I = \ln[R]_0\).</p>
+                        <span class="step-label">Step 4: Finding Constant \(I\)</span>
+                        <p>At time \(t = 0\), concentration \([R] = [R]_0\) (Initial Concentration).</p>
+                        <p>Substituting in Eq. 1: \(\ln[R]_0 = -k(0) + I \implies I = \ln[R]_0\)</p>
                     </div>
 
                     <div class="step">
-                        <span class="step-label">Step 4: Final Log Form</span>
-                        <p>Substitute and convert to base-10 log:</p>
-                        <div class="math-block">
+                        <span class="step-label">Step 5: Final Expression</span>
+                        <p>Substitute \(I\) back into Eq. 1:</p>
+                        <p>\(\ln[R] = -kt + \ln[R]_0\)</p>
+                        <p>\(kt = \ln[R]_0 - \ln[R] = \ln \frac{[R]_0}{[R]}\)</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
                             \(k = \frac{2.303}{t} \log \frac{[R]_0}{[R]}\)
                         </div>
-                    </div>
-
-                    <div class="pro-tip">
-                        💡 <b>Graph Tip:</b> A plot of \(\log[R]\) vs \(t\) gives a straight line with slope \(= -k /
-                        2.303\).
                     </div>
                 </div>
 
                 <div class="derivation-card">
-                    <h2>Half Life of 1st Order (\(t_{1/2}\))</h2>
+                    <h2>Zero Order Integrated Rate Equation</h2>
+                    <span class="badge">3 Marks</span>
                     <div class="step">
-                        <p>Substitute \([R] = [R]_0 / 2\) and \(t = t_{1/2}\) in the integrated equation:</p>
-                        <div class="math-block">
-                            \(k = \frac{2.303}{t_{1/2}} \log \frac{[R]_0}{[R]_0/2} = \frac{2.303}{t_{1/2}} \log 2\)
+                        <span class="step-label">Step 1: Rate Law</span>
+                        <p>For \(R \to P\), Rate is independent of concentration:</p>
+                        <div class="math-block">\(-\frac{d[R]}{dt} = k[R]^0 = k\)</div>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 2: Integration</span>
+                        <p>\(d[R] = -k dt \implies [R] = -kt + I\)</p>
+                        <p>At \(t=0, [R]=[R]_0 \implies I=[R]_0\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 3: Final Form</span>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(k = \frac{[R]_0 - [R]}{t}\)
                         </div>
-                        <div class="math-block" style="border-style:solid; border-color:var(--primary)">
-                            \(t_{1/2} = \frac{0.693}{k}\)
-                        </div>
-                        <p class="pro-tip">💡 Notice that \(t_{1/2}\) <b>does NOT depend</b> on initial concentration
-                            for 1st order!</p>
                     </div>
                 </div>
             </section>
@@ -98,24 +113,26 @@
             <!-- View: Electrochemistry -->
             <section id="view-electro" class="app-view" style="display:none">
                 <div class="derivation-card">
-                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
-                        <h2>The Nernst Equation Proof</h2>
-                        <span class="badge">Unit 2 | Pure Logic</span>
-                    </div>
+                    <h2>Derivation of Nernst Equation</h2>
                     <div class="step">
-                        <span class="step-label">Step 1: Relation with Gibbs Energy</span>
+                        <span class="step-label">Step 1: Thermodynamic Relation</span>
+                        <p>From thermodynamics, Gibbs free energy change is:</p>
                         <div class="math-block">\(\Delta G = \Delta G^\circ + RT \ln Q\)</div>
+                        <p>Where \(Q\) is the reaction quotient.</p>
                     </div>
                     <div class="step">
-                        <span class="step-label">Step 2: Subbing Electrical Work</span>
-                        <p>Since \(\Delta G = -nFE_{\text{cell}}\):</p>
-                        <div class="math-block">\(-nFE_{\text{cell}} = -nFE^\circ + RT \ln Q\)</div>
+                        <span class="step-label">Step 2: Conversion to Cell Potential</span>
+                        <p>We know \(\Delta G = -nFE_{\text{cell}}\) and \(\Delta G^\circ = -nFE^\circ_{\text{cell}}\)
+                        </p>
+                        <div class="math-block">\(-nFE_{\text{cell}} = -nFE^\circ_{\text{cell}} + RT \ln Q\)</div>
                     </div>
                     <div class="step">
-                        <span class="step-label">Step 3: Simplify for 298K</span>
-                        <p>Divide by \(-nF\) and use \(R=8.314, T=298\):</p>
-                        <div class="math-block" style="border-style:solid; border-color:var(--primary)">
-                            \(E_{\text{cell}} = E^\circ - \frac{0.059}{n} \log Q\)
+                        <span class="step-label">Step 3: Simplification</span>
+                        <p>Dividing by \(-nF\):</p>
+                        <div class="math-block">\(E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{RT}{nF} \ln Q\)</div>
+                        <p>Converting to base-10 log and using values at 298K:</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.059}{n} \log Q\)
                         </div>
                     </div>
                 </div>
@@ -124,13 +141,23 @@
             <!-- View: Solutions -->
             <section id="view-solutions" class="app-view" style="display:none">
                 <div class="derivation-card">
-                    <h2>Raoult's Law (Relative Lowering)</h2>
+                    <h2>Elevation in Boiling Point (\(\Delta T_b\))</h2>
+                    <p>Relating molality (\(m\)) to molar mass of solute (\(M_2\)):</p>
                     <div class="step">
-                        <p>For a non-volatile solute:</p>
-                        <div class="math-block">\(P_1 = P_1^\circ x_1\)</div>
-                        <p>Lowering of pressure \(\Delta P = P_1^\circ - P_1\):</p>
-                        <div class="math-block">\(\frac{P_1^\circ - P_1}{P_1^\circ} = x_2\)</div>
-                        <p class="pro-tip">💡 Where \(x_2\) is the mole fraction of the <b>solute</b>.</p>
+                        <span class="step-label">Step 1: Relation</span>
+                        <p>\(\Delta T_b = K_b \cdot m\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 2: Subbing Molality</span>
+                        <p>Molality \(m = \frac{w_2 \times 1000}{M_2 \times w_1}\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 3: Final Molar Mass Formula</span>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(M_2 = \frac{1000 \times K_b \times w_2}{\Delta T_b \times w_1}\)
+                        </div>
+                        <p class="pro-tip">💡 Hamesha specify karna: \(w_2\) = mass of solute, \(M_2\) = molar mass,
+                            etc.</p>
                     </div>
                 </div>
             </section>
@@ -140,11 +167,12 @@
                 <div class="derivation-card">
                     <h2>The Arrhenius Equation</h2>
                     <div class="step">
+                        <span class="step-label">Standard Form</span>
                         <div class="math-block">\(k = A e^{-E_a/RT}\)</div>
                     </div>
                     <div class="step">
                         <span class="step-label">Log Form for two temperatures</span>
-                        <div class="math-block" style="border-style:solid; border-color:var(--primary)">
+                        <div class="math-block" style="border: 2px solid var(--primary);">
                             \(\log \frac{k_2}{k_1} = \frac{E_a}{2.303R} \left[ \frac{T_2 - T_1}{T_1T_2} \right]\)
                         </div>
                     </div>
