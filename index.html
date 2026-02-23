@@ -21,8 +21,10 @@
             <ul class="nav-menu">
                 <li class="nav-item active" data-view="kinetics"><i>⏱️</i> Chemical Kinetics</li>
                 <li class="nav-item" data-view="electro"><i>🔋</i> Electrochemistry</li>
-                <li class="nav-item" data-view="solutions"><i>⚗️</i> Solutions (Raoult's)</li>
-                <li class="nav-item" data-view="arrhenius"><i>🔥</i> Arrhenius Equation</li>
+                <li class="nav-item" data-view="solutions"><i>⚗️</i> Solutions & Van't Hoff</li>
+                <li class="nav-item" data-view="arrhenius"><i>🔥</i> Arrhenius & Theory</li>
+                <li class="nav-item" data-view="solid"><i>💎</i> Solid State (Density/Packing)</li>
+                <li class="nav-item" data-view="surface"><i>🧪</i> Surface Chemistry</li>
             </ul>
             <div class="sidebar-footer" style="position: absolute; bottom: 2rem; width: 80%; text-align: center;">
                 <p style="font-size: 0.8rem; color: var(--text-muted);">Step-by-Step for Ishika ❤️</p>
@@ -216,17 +218,73 @@
                 </div>
 
                 <div class="derivation-card">
-                    <h2>Osmotic Pressure (\(\pi\))</h2>
+                    <h2>Van't Hoff Factor (\(i\)) & Dissociation (\(\alpha\))</h2>
                     <div class="step">
-                        <span class="step-label">Step 1: Van't Hoff Equation</span>
-                        <p>\(\pi = CRT = \frac{n_2}{V} RT\)</p>
+                        <span class="step-label">Step 1: The Setup</span>
+                        <p>Consider dissociation: \(A_n \to nA\)</p>
+                        <p>Initial moles: 1. Moles at equilibrium: \((1-\alpha)\) and \(n\alpha\).</p>
                     </div>
                     <div class="step">
-                        <span class="step-label">Step 2: Molar Mass Determination</span>
-                        <p>Substitute \(n_2 = w_2 / M_2\):</p>
+                        <span class="step-label">Step 2: Total Moles</span>
+                        <p>Total moles = \((1-\alpha) + n\alpha = 1 + \alpha(n-1)\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 3: Relation</span>
                         <div class="math-block" style="border: 2px solid var(--primary);">
-                            \(M_2 = \frac{w_2 RT}{\pi V}\)
+                            \(i = 1 + \alpha(n - 1) \implies \alpha = \frac{i - 1}{n - 1}\)
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- View: Solid State -->
+            <section id="view-solid" class="app-view" style="display:none">
+                <div class="derivation-card">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+                        <h2>Density of a Unit Cell</h2>
+                        <span class="badge">Legendary Chapter</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 1: Mass of Unit Cell</span>
+                        <p>Mass = \(Z \times m\) (Where \(Z\) is number of atoms, \(m\) is mass of single atom).</p>
+                        <p>\(m = M / N_A\) (Molar mass / Avogadro number).</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 2: Volume of Unit Cell</span>
+                        <p>Volume \(V = a^3\) (For a cubic cell with edge length \(a\)).</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 3: Density formula</span>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(d = \frac{Z \cdot M}{a^3 \cdot N_A}\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Packing Efficiency (FCC / CCP)</h2>
+                    <div class="step">
+                        <p>In FCC, atoms touch along face diagonal: \(b = \sqrt{2}a = 4r \implies a = 2\sqrt{2}r\)</p>
+                        <p>Volume of 4 spheres = \(4 \times \frac{4}{3}\pi r^3\)</p>
+                        <p>Total Volume = \(a^3 = (2\sqrt{2}r)^3\)</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(\text{Efficiency} = \frac{\text{Vol. of Atoms}}{\text{Total Vol.}} \times 100 = 74\%\)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- View: Surface Chemistry -->
+            <section id="view-surface" class="app-view" style="display:none">
+                <div class="derivation-card">
+                    <h2>Freundlich Adsorption Isotherm</h2>
+                    <div class="step">
+                        <p>Relating mass of gas adsorbed (\(x\)) per mass of adsorbent (\(m\)) to pressure (\(P\)):</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(\frac{x}{m} = k P^{1/n} \quad (n > 1)\)
+                        </div>
+                        <p>Taking log on both sides:</p>
+                        <div class="math-block">\(\log \frac{x}{m} = \log k + \frac{1}{n} \log P\)</div>
                     </div>
                 </div>
             </section>
