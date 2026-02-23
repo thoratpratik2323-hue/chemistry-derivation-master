@@ -204,15 +204,25 @@
                 </div>
 
                 <div class="derivation-card">
-                    <h2>Depression in Freezing Point (\(\Delta T_f\))</h2>
+                    <h2>Relative Lowering of Vapour Pressure</h2>
                     <div class="step">
-                        <span class="step-label">Step 1: The Relation</span>
-                        <p>\(\Delta T_f = K_f \cdot m\)</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-label">Step 2: Final Molar Mass</span>
+                        <span class="step-label">Derivation</span>
+                        <p>\(P_1 = P_1^\circ x_1 = P_1^\circ (1 - x_2)\)</p>
+                        <p>\(P_1^\circ - P_1 = P_1^\circ x_2\)</p>
                         <div class="math-block" style="border: 2px solid var(--primary);">
-                            \(M_2 = \frac{1000 \times K_f \times w_2}{\Delta T_f \times w_1}\)
+                            \(\frac{P_1^\circ - P_1}{P_1^\circ} = x_2 = \frac{n_2}{n_1 + n_2}\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Osmotic Pressure (\(\pi\))</h2>
+                    <div class="step">
+                        <span class="step-label">Van't Hoff Equation</span>
+                        <p>\(\pi \propto C\) and \(\pi \propto T\)</p>
+                        <p>\(\pi = CRT = \frac{n_2}{V} RT\)</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(M_2 = \frac{w_2 RT}{\pi V}\)
                         </div>
                     </div>
                 </div>
@@ -222,7 +232,7 @@
                     <div class="step">
                         <span class="step-label">Step 1: The Setup</span>
                         <p>Consider dissociation: \(A_n \to nA\)</p>
-                        <p>Initial moles: 1. Moles at equilibrium: \((1-\alpha)\) and \(n\alpha\).</p>
+                        <p>Initially: 1 mole. After dissociation: \((1-\alpha)\) and \(n\alpha\).</p>
                     </div>
                     <div class="step">
                         <span class="step-label">Step 2: Total Moles</span>
@@ -230,8 +240,9 @@
                     </div>
                     <div class="step">
                         <span class="step-label">Step 3: Relation</span>
+                        <p>\(i = \frac{\text{Observed}}{\text{Normal}} = \frac{1 + \alpha(n-1)}{1}\)</p>
                         <div class="math-block" style="border: 2px solid var(--primary);">
-                            \(i = 1 + \alpha(n - 1) \implies \alpha = \frac{i - 1}{n - 1}\)
+                            \(\alpha = \frac{i - 1}{n - 1}\)
                         </div>
                     </div>
                 </div>
@@ -262,13 +273,35 @@
                 </div>
 
                 <div class="derivation-card">
+                    <h2>Packing Efficiency (SCC)</h2>
+                    <div class="step">
+                        <p>In Simple Cubic, \(a = 2r\). Atoms touch along edge.</p>
+                        <p>\(Z = 1\). Volume of atom = \(\frac{4}{3}\pi r^3\).</p>
+                        <p>Total volume = \(a^3 = 8r^3\).</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(\text{P.E.} = \frac{\pi}{6} = 52.4\%\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Packing Efficiency (BCC)</h2>
+                    <div class="step">
+                        <p>Body diagonal \(c = \sqrt{3}a = 4r \implies a = \frac{4r}{\sqrt{3}}\)</p>
+                        <p>\(Z = 2\). Volume of atoms = \(2 \times \frac{4}{3}\pi r^3\).</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(\text{P.E.} = \frac{\sqrt{3}\pi}{8} = 68\%\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
                     <h2>Packing Efficiency (FCC / CCP)</h2>
                     <div class="step">
-                        <p>In FCC, atoms touch along face diagonal: \(b = \sqrt{2}a = 4r \implies a = 2\sqrt{2}r\)</p>
-                        <p>Volume of 4 spheres = \(4 \times \frac{4}{3}\pi r^3\)</p>
-                        <p>Total Volume = \(a^3 = (2\sqrt{2}r)^3\)</p>
+                        <p>Face diagonal \(b = \sqrt{2}a = 4r \implies a = 2\sqrt{2}r\)</p>
+                        <p>\(Z = 4\). Volume of atoms = \(4 \times \frac{4}{3}\pi r^3\).</p>
                         <div class="math-block" style="border: 2px solid var(--primary);">
-                            \(\text{Efficiency} = \frac{\text{Vol. of Atoms}}{\text{Total Vol.}} \times 100 = 74\%\)
+                            \(\text{P.E.} = \frac{\pi}{3\sqrt{2}} = 74\%\)
                         </div>
                     </div>
                 </div>
