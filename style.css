@@ -90,6 +90,8 @@ body {
 
 .main-content {
     padding: 3rem;
+    padding-bottom: 20rem;
+    /* Added massive padding so last item is not stuck at bottom */
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;

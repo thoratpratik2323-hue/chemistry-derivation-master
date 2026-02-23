@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         view.style.opacity = '1';
                         view.style.transform = 'translateY(0)';
                         view.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
                     }, 50);
                 } else {
                     view.style.display = 'none';
@@ -31,5 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.MathJax.typesetPromise();
             }
         });
+    });
+
+    // Back to Top Button
+    const topBtn = document.getElementById('backToTop');
+    window.onscroll = function () {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    topBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
