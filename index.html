@@ -25,6 +25,8 @@
                 <li class="nav-item" data-view="arrhenius"><i>🔥</i> Arrhenius & Theory</li>
                 <li class="nav-item" data-view="solid"><i>💎</i> Solid State (Density/Packing)</li>
                 <li class="nav-item" data-view="surface"><i>🧪</i> Surface Chemistry</li>
+                <li class="nav-item" data-view="organic"><i>🧪</i> Organic Mechanisms</li>
+                <li class="nav-item" data-view="coordination"><i>⚛️</i> Coordination & Others</li>
             </ul>
             <div class="sidebar-footer" style="position: absolute; bottom: 2rem; width: 80%; text-align: center;">
                 <p style="font-size: 0.8rem; color: var(--text-muted);">Step-by-Step for Ishika ❤️</p>
@@ -107,6 +109,30 @@
                         <span class="step-label">Step 3: Final Form</span>
                         <div class="math-block" style="border: 2px solid var(--primary);">
                             \(k = \frac{[R]_0 - [R]}{t}\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Half Life of Zero Order</h2>
+                    <div class="step">
+                        <p>At \(t = t_{1/2}\), \([R] = [R]_0 / 2\)</p>
+                        <p>Substitute in \(kt = [R]_0 - [R]\):</p>
+                        <div class="math-block">\(k \cdot t_{1/2} = [R]_0 - \frac{[R]_0}{2} = \frac{[R]_0}{2}\)</div>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(t_{1/2} = \frac{[R]_0}{2k}\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Half Life of 1st Order (\(t_{1/2}\))</h2>
+                    <div class="step">
+                        <p>At \(t = t_{1/2}\), concentration \([R] = [R]_0 / 2\)</p>
+                        <p>Substitute in \(k = \frac{2.303}{t} \log \frac{[R]_0}{[R]}\):</p>
+                        <div class="math-block">\(k = \frac{2.303}{t_{1/2}} \log \frac{[R]_0}{[R]_0/2} = \frac{2.303
+                            \times 0.3010}{t_{1/2}}\)</div>
+                        <div class="math-block" style="border: 2px solid var(--primary);">\(t_{1/2} = \frac{0.693}{k}\)
                         </div>
                     </div>
                 </div>
@@ -246,6 +272,18 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="derivation-card">
+                    <h2>Van't Hoff Factor (\(i\)) & Association (\(\alpha\))</h2>
+                    <div class="step">
+                        <p>Consider association: \(nA \to A_n\)</p>
+                        <p>Initially: 1 mole. After association: \((1-\alpha)\) and \(\alpha/n\).</p>
+                        <p>Total moles = \(1 - \alpha + \alpha/n = 1 + \alpha(\frac{1}{n} - 1)\)</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(\alpha = \frac{i - 1}{\frac{1}{n} - 1}\)
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- View: Solid State -->
@@ -334,6 +372,102 @@
                         <span class="step-label">Log Form for two temperatures</span>
                         <div class="math-block" style="border: 2px solid var(--primary);">
                             \(\log \frac{k_2}{k_1} = \frac{E_a}{2.303R} \left[ \frac{T_2 - T_1}{T_1T_2} \right]\)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- View: Organic Mechanisms -->
+            <section id="view-organic" class="app-view" style="display:none">
+                <div class="derivation-card">
+                    <h2>SN2 Mechanism (Substitution Nucleophilic Bimolecular)</h2>
+                    <span class="badge">1 Step | 3 Marks</span>
+                    <div class="step">
+                        <p>Rate depends on both substrate and nucleophile: \(\text{Rate} = k[R-X][Nu^-]\)</p>
+                        <p><b>Backside Attack:</b> Nucleophile attacks from the side opposite to the leaving group.</p>
+                        <p><b>Transition State:</b> A high-energy state where both partial bonds exist.</p>
+                        <div class="math-block" style="color:#fdba74">Nu^- + C-X \to [Nu \cdots C \cdots X]^\ddagger \to
+                            Nu-C + X^-</div>
+                        <p class="pro-tip">💡 Result: **Walden Inversion** (Configuration reverses).</p>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>SN1 Mechanism (Unimolecular)</h2>
+                    <span class="badge">2 Steps | 3 Marks</span>
+                    <div class="step">
+                        <span class="step-label">Step 1: Carbocation Formation (RDS)</span>
+                        <p>Heterolytic cleavage of C-X bond: \(R-X \to R^+ + X^-\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 2: Nucleophilic Attack</span>
+                        <p>Attack from either side leads to **Racemization**.</p>
+                        <div class="math-block" style="color:#fdba74">R^+ + Nu^- \to R-Nu</div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Dehydration of Ethanol to Ethene</h2>
+                    <span class="badge">V. Imp Mechanism</span>
+                    <div class="step">
+                        <span class="step-label">Step 1: Protonation</span>
+                        <p>\(CH_3CH_2OH + H^+ \to CH_3CH_2OH_2^+\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 2: Formation of Carbocation</span>
+                        <p>\(CH_3CH_2OH_2^+ \to CH_3CH_2^+ + H_2O\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 3: Loss of Proton</span>
+                        <p>\(CH_3CH_2^+ \to CH_2=CH_2 + H^+\)</p>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Nucleophilic Addition (Carbonyl Group)</h2>
+                    <span class="badge">V. Imp for Boards</span>
+                    <div class="step">
+                        <p>Example: Addition of \(HCN\)</p>
+                        <p><b>Step 1:</b> Attack of nucleophile (\(CN^-\)) on electrophilic carbon.</p>
+                        <p>Intermediate: Tetrahedral alkoxide ion.</p>
+                        <p><b>Step 2:</b> Capture of proton from the medium to form cyanohydrin.</p>
+                        <div class="math-block"
+                            style="color:#fdba74; padding: 1rem; background: rgba(255,255,255,0.05);">
+                            &gt;C=O + Nu^- &rarr; &gt;C(Nu)-O^- &rarr;[H^+] &gt;C(Nu)-OH
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- View: Coordination & Others -->
+            <section id="view-coordination" class="app-view" style="display:none">
+                <div class="derivation-card">
+                    <h2>Crystal Field Splitting Energy (CFSE)</h2>
+                    <div class="step">
+                        <p>For Octahedral complexes (\(\Delta_o\)):</p>
+                        <p>Lower energy \(t_{2g}\), Higher energy \(e_g\).</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(\text{CFSE} = [-0.4(n_{t_{2g}}) + 0.6(n_{e_g})] \Delta_o + nP\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Magnetic Moment (\(\mu\))</h2>
+                    <div class="step">
+                        <span class="step-label">Spin-only Formula</span>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(\mu = \sqrt{n(n+2)} \text{ BM}\)
+                        </div>
+                        <p>Where \(n\) is the number of unpaired electrons.</p>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Relation between \(K_p\) and \(K_c\)</h2>
+                    <div class="step">
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(K_p = K_c (RT)^{\Delta n_g}\)
                         </div>
                     </div>
                 </div>
