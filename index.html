@@ -108,6 +108,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="derivation-card">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+                        <h2>1st Order Integrated Rate Equation (Gas Phase)</h2>
+                        <span class="badge">Important</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 1: Reaction Setup</span>
+                        <p>Consider: \(A(g) \to B(g) + C(g)\)</p>
+                        <p>Initial pressure at \(t=0\) is \(P_i\). At time \(t\), total pressure is \(P_t\).</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 2: Partial Pressures</span>
+                        <p>Let \(x\) be the decrease in pressure of A:</p>
+                        <p>\(P_A = P_i - x, \quad P_B = x, \quad P_C = x\)</p>
+                        <p>\(P_t = (P_i - x) + x + x = P_i + x \implies x = P_t - P_i\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 3: Final Substitution</span>
+                        <p>\(P_A = P_i - (P_t - P_i) = 2P_i - P_t\)</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(k = \frac{2.303}{t} \log \frac{P_i}{2P_i - P_t}\)
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- View: Electrochemistry -->
@@ -127,13 +151,29 @@
                         <div class="math-block">\(-nFE_{\text{cell}} = -nFE^\circ_{\text{cell}} + RT \ln Q\)</div>
                     </div>
                     <div class="step">
-                        <span class="step-label">Step 3: Simplification</span>
-                        <p>Dividing by \(-nF\):</p>
-                        <div class="math-block">\(E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{RT}{nF} \ln Q\)</div>
-                        <p>Converting to base-10 log and using values at 298K:</p>
+                        <span class="step-label">Step 3: Final Form (298K)</span>
                         <div class="math-block" style="border: 2px solid var(--primary);">
                             \(E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.059}{n} \log Q\)
                         </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Relation between \(E^\circ_{\text{cell}}\) and \(K_c\)</h2>
+                    <div class="step">
+                        <span class="step-label">Step 1: Equilibrium Condition</span>
+                        <p>At equilibrium, \(E_{\text{cell}} = 0\) and \(Q = K_c\).</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 2: Substitute in Nernst</span>
+                        <div class="math-block">\(0 = E^\circ_{\text{cell}} - \frac{2.303 RT}{nF} \log K_c\)</div>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 3: Final Form (298K)</span>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(E^\circ_{\text{cell}} = \frac{0.059}{n} \log K_c\)
+                        </div>
+                        <p>Also, \(\Delta G^\circ = -nFE^\circ_{\text{cell}} = -2.303 RT \log K_c\)</p>
                     </div>
                 </div>
             </section>
@@ -158,6 +198,35 @@
                         </div>
                         <p class="pro-tip">💡 Hamesha specify karna: \(w_2\) = mass of solute, \(M_2\) = molar mass,
                             etc.</p>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Depression in Freezing Point (\(\Delta T_f\))</h2>
+                    <div class="step">
+                        <span class="step-label">Step 1: The Relation</span>
+                        <p>\(\Delta T_f = K_f \cdot m\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 2: Final Molar Mass</span>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(M_2 = \frac{1000 \times K_f \times w_2}{\Delta T_f \times w_1}\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Osmotic Pressure (\(\pi\))</h2>
+                    <div class="step">
+                        <span class="step-label">Step 1: Van't Hoff Equation</span>
+                        <p>\(\pi = CRT = \frac{n_2}{V} RT\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">Step 2: Molar Mass Determination</span>
+                        <p>Substitute \(n_2 = w_2 / M_2\):</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(M_2 = \frac{w_2 RT}{\pi V}\)
+                        </div>
                     </div>
                 </div>
             </section>
