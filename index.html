@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemistry Derivation Master | Ishika's Prep 2026</title>
+    <title>Chemistry Derivation Master | Ultimate Board Edition</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
@@ -17,158 +17,314 @@
 <body>
     <div class="app-container">
         <aside class="sidebar">
-            <div class="logo">📜 <span>DerivationMaster</span></div>
+            <div class="logo">📜 <span>ProofPro</span></div>
             <ul class="nav-menu">
-                <li class="nav-item active" data-view="kinetics"><i>⏱️</i> Kinetics & Arrhenius</li>
+                <li class="nav-item active" data-view="solutions"><i>⚗️</i> Solutions</li>
                 <li class="nav-item" data-view="electro"><i>🔋</i> Electrochemistry</li>
-                <li class="nav-item" data-view="solutions"><i>⚗️</i> Solutions & Colligative</li>
+                <li class="nav-item" data-view="kinetics"><i>⏱️</i> Chemical Kinetics</li>
                 <li class="nav-item" data-view="solid-surface"><i>💎</i> Solid & Surface</li>
-                <li class="nav-item" data-view="inorganic"><i>⚛️</i> Inorganic Theory</li>
-                <li class="nav-item" data-view="organic-1"><i>🧪</i> Organic (Part A)</li>
-                <li class="nav-item" data-view="organic-2"><i>🧪</i> Organic (Part B)</li>
+                <li class="nav-item" data-view="inorganic"><i>⚛️</i> Coordination Theory</li>
+                <li class="nav-item" data-view="organic-1"><i>🧪</i> Organic A (Reaction Mech)</li>
+                <li class="nav-item" data-view="organic-2"><i>🧪</i> Organic B (Name Actions)</li>
             </ul>
         </aside>
 
         <main class="main-content">
             <header class="header">
-                <h1>Chemistry <span style="color:var(--primary)">Derivation</span> Hub</h1>
-                <p>Master the proofs that secure those 5-mark board questions! 📈</p>
+                <h1>Chemistry <span style="color:var(--primary)">Proof</span> Encyclopedia</h1>
+                <p>Fully derived step-by-step for Ishu. Secure every 5-mark question! 🏆</p>
             </header>
 
-            <!-- View: Kinetics & Arrhenius -->
-            <section id="view-kinetics" class="app-view">
+            <!-- SOLUTIONS SECTION -->
+            <section id="view-solutions" class="app-view">
                 <div class="derivation-card">
-                    <h2>1st Order Rate Equation</h2>
+                    <h2>Raoult's Law & Total Pressure Proof</h2>
                     <div class="step">
-                        <p>\(k = \frac{2.303}{t} \log \frac{[R]_0}{[R]}\)</p>
-                        <p><b>Half Life:</b> \(t_{1/2} = \frac{0.693}{k}\)</p>
+                        <span class="step-label">1. Introduction</span>
+                        <p>For a binary solution of volatile liquids A and B, partial pressures are: \(P_A = P_A^\circ
+                            x_A\) and \(P_B = P_B^\circ x_B\).</p>
                     </div>
-                </div>
-                <div class="derivation-card">
-                    <h2>Zero Order Rate Equation</h2>
                     <div class="step">
-                        <p>\(k = \frac{[R]_0 - [R]}{t}\)</p>
-                        <p><b>Half Life:</b> \(t_{1/2} = \frac{[R]_0}{2k}\)</p>
-                    </div>
-                </div>
-                <div class="derivation-card">
-                    <h2>Arrhenius Equation</h2>
-                    <div class="step">
-                        <p>\(k = A e^{-E_a/RT}\)</p>
-                        <div class="math-block" style="border: 2px solid var(--primary);">
-                            \(\log \frac{k_2}{k_1} = \frac{E_a}{2.303R} \left[ \frac{T_2 - T_1}{T_1 T_2} \right]\)
+                        <span class="step-label">2. Mathematical Derivation</span>
+                        <p>\(P_{\text{total}} = P_A + P_B = P_A^\circ x_A + P_B^\circ x_B\)</p>
+                        <p>Since \(x_A = 1 - x_B\):</p>
+                        <p>\(P_{\text{total}} = P_A^\circ (1 - x_B) + P_B^\circ x_B\)</p>
+                        <div class="math-block" style="border: 1px solid var(--primary);">
+                            \(P_{\text{total}} = P_A^\circ + (P_B^\circ - P_A^\circ) x_B\)
                         </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Relative Lowering of Vapour Pressure (RLVP)</h2>
+                    <div class="step">
+                        <p>Let \(P_1^\circ\) be vapor pressure of pure solvent and \(P_1\) be of solution.</p>
+                        <p>\(P_1 = P_1^\circ x_1 \implies P_1 = P_1^\circ (1 - x_2)\)</p>
+                        <p>\(P_1^\circ - P_1 = P_1^\circ x_2 \implies \frac{P_1^\circ - P_1}{P_1^\circ} = x_2\)</p>
+                        <div class="math-block" style="border: 1px solid var(--primary);">
+                            \(\frac{\Delta P}{P^\circ} = \frac{w_2/M_2}{w_1/M_1} \text{ (for dilute solutions)}\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Elevation of Boiling Point (\(\Delta T_b\))</h2>
+                    <div class="step">
+                        <p>\(\Delta T_b = T_b - T_b^\circ\)</p>
+                        <p>\(\Delta T_b = K_b \cdot m \implies \Delta T_b = K_b \cdot \frac{w_2 \cdot 1000}{M_2 \cdot
+                            w_1}\)</p>
+                        <div class="math-block" style="border: 1px solid var(--primary);">
+                            \(M_2 = \frac{1000 \cdot K_b \cdot w_2}{\Delta T_b \cdot w_1}\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Depression of Freezing Point (\(\Delta T_f\))</h2>
+                    <div class="step">
+                        <p>\(\Delta T_f = T_f^\circ - T_f\)</p>
+                        <p>\(\Delta T_f = K_f \cdot m \implies \Delta T_f = K_f \cdot \frac{w_2 \cdot 1000}{M_2 \cdot
+                            w_1}\)</p>
+                        <div class="math-block" style="border: 1px solid var(--primary);">
+                            \(M_2 = \frac{1000 \cdot K_f \cdot w_2}{\Delta T_f \cdot w_1}\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Osmotic Pressure Derivation (\(\pi\))</h2>
+                    <div class="step">
+                        <p>\(\pi = CRT = \frac{n_2}{V} RT = \frac{w_2}{M_2 V} RT\)</p>
+                        <div class="math-block" style="border: 1px solid var(--primary);">
+                            \(M_2 = \frac{w_2 RT}{\pi V}\)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Van't Hoff Factor (\(i\)) Proofs</h2>
+                    <div class="step">
+                        <p><b>Dissociation:</b> \(A \to nB\). If \(\alpha\) is degree of dissociation:</p>
+                        <p>\(i = \frac{1 - \alpha + n\alpha}{1} = 1 + \alpha(n - 1)\)</p>
+                    </div>
+                    <div class="step">
+                        <p><b>Association:</b> \(nA \to A_n\). If \(\alpha\) is degree of association:</p>
+                        <p>\(i = 1 - \alpha + \frac{\alpha}{n} = 1 + \alpha\left(\frac{1}{n} - 1\right)\)</p>
                     </div>
                 </div>
             </section>
 
-            <!-- View: Electrochemistry -->
+            <!-- ELECTROCHEMISTRY SECTION -->
             <section id="view-electro" class="app-view" style="display:none">
                 <div class="derivation-card">
-                    <h2>Nernst Equation</h2>
+                    <h2>Nernst Equation (Full Thermodynamic Proof)</h2>
                     <div class="step">
-                        <div class="math-block" style="border: 2px solid var(--primary);">
-                            \(E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.059}{n} \log Q\)
+                        <span class="step-label">1. Basic Relation</span>
+                        <p>Gibbs Free Energy: \(\Delta G = \Delta G^\circ + RT \ln Q\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">2. Link to E_cell</span>
+                        <p>We know \(\Delta G = -nFE_{\text{cell}}\) and \(\Delta G^\circ = -nFE^\circ_{\text{cell}}\)
+                        </p>
+                        <p>\(-nFE_{\text{cell}} = -nFE^\circ_{\text{cell}} + RT \ln Q\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">3. Final Expression</span>
+                        <p>Dividing by \(-nF\): \(E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{RT}{nF} \ln Q\)</p>
+                        <div class="math-block" style="border: 1px solid var(--primary);">
+                            \(E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.059}{n} \log Q \text{ (at 298K)}\)
                         </div>
-                        <p>Relation with \(\Delta G^\circ\): \(\Delta G^\circ = -nFE^\circ_{\text{cell}}\)</p>
                     </div>
                 </div>
+
                 <div class="derivation-card">
-                    <h2>Faraday's Laws</h2>
+                    <h2>Faraday's Laws of Electrolysis</h2>
                     <div class="step">
-                        <p><b>1st Law:</b> \(m = Zit\)</p>
-                        <p><b>2nd Law:</b> \(\frac{m_1}{m_2} = \frac{E_1}{E_2}\)</p>
+                        <p><b>First Law:</b> \(m \propto Q \implies m = ZQ = ZIt\)</p>
+                        <p>Value of \(Z = \frac{\text{Equivalent Weight}}{F}\)</p>
+                    </div>
+                    <div class="step">
+                        <p><b>Second Law:</b> \(\frac{m_1}{m_2} = \frac{E_1}{E_2}\) (for constant charge \(Q\)).</p>
                     </div>
                 </div>
+
                 <div class="derivation-card">
-                    <h2>Kohlrausch's Law</h2>
+                    <h2>Kohlrausch's Law of Independent Migration</h2>
                     <div class="step">
-                        <p>\(\Lambda_m^\circ = \nu_+ \lambda_+^\circ + \nu_- \lambda_-^\circ\)</p>
-                        <p>\(\Lambda_m = \frac{\kappa \times 1000}{M}\)</p>
+                        <p>At infinite dilution, molar conductivity is sum of ionic contributions:</p>
+                        <div class="math-block" style="border: 1px solid var(--primary);">
+                            \(\Lambda_m^\circ = \nu_+ \lambda_+^\circ + \nu_- \lambda_-^\circ\)
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- View: Solutions & Colligative -->
-            <section id="view-solutions" class="app-view" style="display:none">
+            <!-- KINETICS SECTION -->
+            <section id="view-kinetics" class="app-view" style="display:none">
                 <div class="derivation-card">
-                    <h2>Raoult's Law & RLVP</h2>
+                    <h2>Integrated Rate Law: First Order</h2>
                     <div class="step">
-                        <p><b>Raoult:</b> \(P_1 = P_1^\circ x_1\)</p>
-                        <p><b>RLVP:</b> \(\frac{P_1^\circ - P_1}{P_1^\circ} = x_2\)</p>
+                        <span class="step-label">1. Rate Law</span>
+                        <p>\(-\frac{d[R]}{dt} = k[R]\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">2. Integration</span>
+                        <p>\(\int \frac{d[R]}{[R]} = -k \int dt \to \ln[R] = -kt + C\)</p>
+                        <p>At \(t=0\), \(C = \ln[R]_0\)</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-label">3. Final Form</span>
+                        <p>\(\ln \frac{[R]_0}{[R]} = kt \implies k = \frac{2.303}{t} \log \frac{[R]_0}{[R]}\)</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(t_{1/2} = \frac{0.693}{k}\)
+                        </div>
                     </div>
                 </div>
+
                 <div class="derivation-card">
-                    <h2>Elevation & Depression</h2>
+                    <h2>Arrhenius Equation Proof</h2>
                     <div class="step">
-                        <p>\(\Delta T_b = i k_b m\)</p>
-                        <p>\(\Delta T_f = i k_f m\)</p>
-                        <div class="math-block">\(M_2 = \frac{1000 \cdot K \cdot w_2}{\Delta T \cdot w_1}\)</div>
-                    </div>
-                </div>
-                <div class="derivation-card">
-                    <h2>Osmotic Pressure & Van't Hoff</h2>
-                    <div class="step">
-                        <p>\(\pi = iCRT\)</p>
-                        <p><b>Dissociation:</b> \(i = 1 + \alpha(n-1)\)</p>
-                        <p><b>Association:</b> \(i = 1 + \alpha(\frac{1}{n} - 1)\)</p>
+                        <p>\(k = A e^{-E_a/RT}\)</p>
+                        <p>\(\log k = \log A - \frac{E_a}{2.303 RT}\)</p>
+                        <div class="math-block" style="border: 1px solid var(--primary);">
+                            \(\log \frac{k_2}{k_1} = \frac{E_a}{2.303 R} \left( \frac{T_2 - T_1}{T_1 T_2} \right)\)
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- View: Solid & Surface -->
+            <!-- SOLID & SURFACE SECTION -->
             <section id="view-solid-surface" class="app-view" style="display:none">
                 <div class="derivation-card">
-                    <h2>Unit Cell Math</h2>
+                    <h2>Derivation of Unit Cell Density</h2>
                     <div class="step">
-                        <p><b>Density:</b> \(d = \frac{Z \cdot M}{a^3 \cdot N_A}\)</p>
-                        <p><b>Packing Efficiency:</b> SCC: 52.4%, BCC: 68%, FCC/CCP: 74%</p>
+                        <p>Mass of unit cell = \(Z \times (\text{Atomic Mass } / N_A)\)</p>
+                        <p>Volume of unit cell = \(a^3\)</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(d = \frac{Z \times M}{a^3 \times N_A}\)
+                        </div>
                     </div>
                 </div>
+
                 <div class="derivation-card">
                     <h2>Adsorption Isotherms</h2>
                     <div class="step">
-                        <p><b>Freundlich:</b> \(x/m = kP^{1/n}\)</p>
-                        <p><b>Langmuir:</b> \(x/m = \frac{ap}{1+bp}\)</p>
+                        <p><b>Freundlich:</b> \(\frac{x}{m} = k P^{1/n} \implies \log \frac{x}{m} = \log k + \frac{1}{n}
+                            \log P\)</p>
+                    </div>
+                    <div class="step">
+                        <p><b>Langmuir:</b> Rate of Ads = Rate of Des.</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(\frac{x}{m} = \frac{aP}{1 + bP}\)
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- View: Inorganic Theory -->
+            <!-- INORGANIC SECTION -->
             <section id="view-inorganic" class="app-view" style="display:none">
                 <div class="derivation-card">
-                    <h2>Coordination Proofs</h2>
+                    <h2>Werner's Theory Postulates</h2>
                     <div class="step">
-                        <p><b>Werner:</b> Primary valence = Ionizable. Secondary = Non-ionizable.</p>
-                        <p><b>VBT:</b> Outer vs Inner orbital complexes (\(sp^3d^2\) vs \(d^2sp^3\)).</p>
-                        <p><b>CFT:</b> Splitting of d-orbitals in field (\(\Delta_o, \Delta_t\)).</p>
-                        <p><b>Magnetism:</b> \(\mu = \sqrt{n(n+2)}\) BM.</p>
+                        <p>1. Primary Valence (ionizable, oxidation state).</p>
+                        <p>2. Secondary Valence (non-ionizable, coordination number).</p>
+                    </div>
+                </div>
+                <div class="derivation-card">
+                    <h2>Magnetic Moment Proof (\(\mu_s\))</h2>
+                    <div class="step">
+                        <p>Based on spin-only formula for \(n\) unpaired electrons:</p>
+                        <div class="math-block" style="border: 2px solid var(--primary);">
+                            \(\mu = \sqrt{n(n + 2)} \text{ BM}\)
+                        </div>
+                    </div>
+                </div>
+                <div class="derivation-card">
+                    <h2>Crystal Field Splitting Energy (CFSE)</h2>
+                    <div class="step">
+                        <p><b>Octahedral:</b> \(\text{CFSE} = [-0.4n_{t_{2g}} + 0.6n_{e_g}] \Delta_o + nP\)</p>
                     </div>
                 </div>
             </section>
 
-            <!-- View: Organic (Part A) -->
+            <!-- ORGANIC A SECTION -->
             <section id="view-organic-1" class="app-view" style="display:none">
                 <div class="derivation-card">
-                    <h2>Haloalkanes & Alcohols</h2>
+                    <h2>SN2 Mechanism (Concerted)</h2>
                     <div class="step">
-                        <p><b>SN1:</b> Unimolecular, 2 steps, Carbon-cation RDS, Racemic.</p>
-                        <p><b>SN2:</b> Bimolecular, 1 step, Backside attack, Inversion.</p>
-                        <p><b>Elimination (E1/E2):</b> Alkene formation, Saytzeff rule.</p>
-                        <p><b>Alcohol Dehydration:</b> Protonation \(\to\) Carbocation \(\to\) Double bond.</p>
+                        <p>1-step reaction. Nucleophile attacks from backside.</p>
+                        <p><b>Transition State:</b> Pentavalent carbon. \(sp^2\) state transition.</p>
+                        <p><b>Inversion:</b> Configuration flips (Walden Inversion).</p>
+                    </div>
+                </div>
+                <div class="derivation-card">
+                    <h2>SN1 Mechanism (Stepwise)</h2>
+                    <div class="step">
+                        <p><b>Step 1:</b> Carbocation formation (RDS). Rate = \(k[R-X]^1\).</p>
+                        <p><b>Step 2:</b> Fast attack by nucleophile. Racemic mixture formed.</p>
+                    </div>
+                </div>
+                <div class="derivation-card">
+                    <h2>Mechanism of Alcohol Dehydration</h2>
+                    <div class="step">
+                        <p><b>Step 1:</b> Protonation of alcohol (\(-OH \to -OH_2^+\)).</p>
+                        <p><b>Step 2:</b> Loss of \(H_2O\) to form Carbocation (RDS).</p>
+                        <p><b>Step 3:</b> Elimination of H+ from \(\beta\)-carbon to form Alkenes.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- View: Organic (Part B) -->
+            <!-- ORGANIC B SECTION -->
             <section id="view-organic-2" class="app-view" style="display:none">
                 <div class="derivation-card">
-                    <h2>Aldol, Cannizzaro & Amines</h2>
+                    <h2>Nucleophilic Addition (Carbonyl Group)</h2>
                     <div class="step">
-                        <p><b>Aldol:</b> Dilute NaOH + \(\alpha\)-H aldehydes.</p>
-                        <p><b>Cannizzaro:</b> Conc. NaOH + No \(\alpha\)-H aldehydes.</p>
-                        <p><b>Hoffmann Bromamide:</b> Amide \(\to\) Amine (1 Carbon less).</p>
-                        <p><b>Coupling:</b> Diazonium salt + Phenol/Aniline \(\to\) Azo Dye.</p>
+                        <p>Electronic structure of \(C=O\) is polar. Nucleophile attacks electrophilic Carbon.</p>
+                        <p>Intermediat: Tetrahedral alkoxide ion.</p>
+                        <div class="math-block">\(>C=O + Nu^- \to >C(Nu)O^- \xrightarrow{H^+} >C(Nu)OH\)</div>
+                    </div>
+                </div>
+                <div class="derivation-card">
+                    <h2>Aldol Condensation Mechanism</h2>
+                    <div class="step">
+                        <p><b>1. Enolate Formation:</b> Base abstracts \(\alpha\)-Hydrogen.</p>
+                        <p><b>2. Nucleophilic Attack:</b> Enolate attacks second aldehyde molecule.</p>
+                        <p><b>3. Protonation:</b> Forms \(\beta\)-hydroxy aldehyde (Aldol).</p>
+                    </div>
+                </div>
+                <div class="derivation-card">
+                    <h2>Hoffmann Bromamide Degradation</h2>
+                    <div class="step">
+                        <p>Convert Amide to Primary Amine with 1 carbon less.</p>
+                        <div class="math-block">\(R-CO-NH_2 + Br_2 + 4NaOH \to R-NH_2 + Na_2CO_3 + 2NaBr + 2H_2O\)</div>
+                    </div>
+                </div>
+                <div class="derivation-card">
+                    <h2>Diazotization & Coupling</h2>
+                    <div class="step">
+                        <p><b>Diazotization:</b> Aniline + \(NaNO_2\) + HCl (\(0-5^\circ C\)) \(\to\) Benzene Diazonium
+                            Chloride.</p>
+                        <p><b>Coupling:</b> Diazonium salt + Phenol \(\to\) p-hydroxyazobenzene (Orange dye).</p>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>Cannizzaro Reaction Mechanism</h2>
+                    <div class="step">
+                        <p>For aldehydes with **NO \(\alpha\)-Hydrogen** (e.g., Formaldehyde, Benzaldehyde).</p>
+                        <p><b>1. Nucleophilic Attack:</b> \(OH^-\) attacks carbonyl carbon \(\to\) Hydroxyl alkoxide.
+                        </p>
+                        <p><b>2. Hydride Transfer:</b> One molecule transfers \(H^-\) to another (RDS).</p>
+                        <p><b>3. Proton Transfer:</b> Forms Salt of Acid and Alcohol.</p>
+                    </div>
+                </div>
+
+                <div class="derivation-card">
+                    <h2>HVZ (Hell-Volhard-Zelinsky)</h2>
+                    <div class="step">
+                        <p>Halogenation of \(\alpha\)-carbon of carboxylic acids.</p>
+                        <div class="math-block">\(R-CH_2-COOH \xrightarrow[2. H_2O]{1. X_2/Red P} R-CH(X)-COOH\)</div>
+                        <p>Requires \(\alpha\)-Hydrogen and red phosphorus catalyst.</p>
                     </div>
                 </div>
             </section>
